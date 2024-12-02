@@ -23,10 +23,6 @@ policy "cloudtrail-server-side-encryption-enabled" {
   enforcement_level = "advisory"
 }
 
-module "report" {
-  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-CloudTrail-Terraform/1.0.1/policy-module/report.sentinel?checksum=sha256:e8422be2bf132524ef264934609cbfbf4846e77936003448a69747330fcfe9ba"
-}
-
 module "tfresources" {
   source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-CloudTrail-Terraform/1.0.1/policy-module/tfresources.sentinel?checksum=sha256:54edaac2a209f55d117f92291baae78d400fd47d94336e614f2cadf6b38bea99"
 }
@@ -75,13 +71,6 @@ policy "ec2-vpc-default-security-group-no-traffic" {
   enforcement_level = "advisory"
 }
 
-module "tfresources" {
-  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-EC2-Terraform/1.0.1/policy-module/tfresources.sentinel?checksum=sha256:54edaac2a209f55d117f92291baae78d400fd47d94336e614f2cadf6b38bea99"
-}
-
-module "report" {
-  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-EC2-Terraform/1.0.1/policy-module/report.sentinel?checksum=sha256:e8422be2bf132524ef264934609cbfbf4846e77936003448a69747330fcfe9ba"
-}
 policy "efs-encryption-at-rest-enabled" {
   source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-EFS-Terraform/1.0.1/policy/efs-encryption-at-rest-enabled.sentinel?checksum=sha256:27596ba157f11c01f296339a28fcfe860f609983da972a81ad78b81878184b59"
   enforcement_level = "advisory"
@@ -91,21 +80,11 @@ module "report" {
   source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-EFS-Terraform/1.0.1/policy-module/report.sentinel?checksum=sha256:e8422be2bf132524ef264934609cbfbf4846e77936003448a69747330fcfe9ba"
 }
 
-module "tfresources" {
-  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-EFS-Terraform/1.0.1/policy-module/tfresources.sentinel?checksum=sha256:54edaac2a209f55d117f92291baae78d400fd47d94336e614f2cadf6b38bea99"
-}
 policy "kms-key-rotation-enabled" {
   source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-KMS-Terraform/1.0.1/policy/kms-key-rotation-enabled.sentinel?checksum=sha256:4dba0c6e9dfb11add462b52db35db04052b5ca2b6c95c09bcc20a830d426ff79"
   enforcement_level = "advisory"
 }
 
-module "report" {
-  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-KMS-Terraform/1.0.1/policy-module/report.sentinel?checksum=sha256:e8422be2bf132524ef264934609cbfbf4846e77936003448a69747330fcfe9ba"
-}
-
-module "tfresources" {
-  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-KMS-Terraform/1.0.1/policy-module/tfresources.sentinel?checksum=sha256:54edaac2a209f55d117f92291baae78d400fd47d94336e614f2cadf6b38bea99"
-}
 policy "rds-public-access-disabled" {
   source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-RDS-Terraform/1.0.2/policy/rds-public-access-disabled.sentinel?checksum=sha256:3a376ca9c8b2c98095d6a1dc145071bef53cf6d75dcbe23a1d00edb3f40617c7"
   enforcement_level = "advisory"
@@ -121,25 +100,13 @@ policy "rds-encryption-at-rest-enabled" {
   enforcement_level = "advisory"
 }
 
-module "report" {
-  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-RDS-Terraform/1.0.2/policy-module/report.sentinel?checksum=sha256:e8422be2bf132524ef264934609cbfbf4846e77936003448a69747330fcfe9ba"
-}
 
-module "tfresources" {
-  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-RDS-Terraform/1.0.2/policy-module/tfresources.sentinel?checksum=sha256:54edaac2a209f55d117f92291baae78d400fd47d94336e614f2cadf6b38bea99"
-}
 policy "vpc-flow-logging-enabled" {
   source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-VPC-Terraform/1.0.1/policy/vpc-flow-logging-enabled.sentinel?checksum=sha256:179e54896ab33a8891a1eaeec6f5e02fb3463ef4b5d96a95bbf10cfa1a77e455"
   enforcement_level = "advisory"
 }
 
-module "report" {
-  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-VPC-Terraform/1.0.1/policy-module/report.sentinel?checksum=sha256:e8422be2bf132524ef264934609cbfbf4846e77936003448a69747330fcfe9ba"
-}
 
-module "tfresources" {
-  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-VPC-Terraform/1.0.1/policy-module/tfresources.sentinel?checksum=sha256:54edaac2a209f55d117f92291baae78d400fd47d94336e614f2cadf6b38bea99"
-}
 policy "iam-no-admin-privileges-allowed-by-policies" {
   source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-IAM-Terraform/1.0.1/policy/iam-no-admin-privileges-allowed-by-policies.sentinel?checksum=sha256:b004ced868b212763b382cb8b55738eda85a553abdad2e6733fe21a83908bc81"
   enforcement_level = "advisory"
@@ -185,13 +152,6 @@ policy "iam-no-policies-attached-to-users" {
   enforcement_level = "advisory"
 }
 
-module "report" {
-  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-IAM-Terraform/1.0.1/policy-module/report.sentinel?checksum=sha256:e8422be2bf132524ef264934609cbfbf4846e77936003448a69747330fcfe9ba"
-}
-
-module "tfresources" {
-  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-IAM-Terraform/1.0.1/policy-module/tfresources.sentinel?checksum=sha256:54edaac2a209f55d117f92291baae78d400fd47d94336e614f2cadf6b38bea99"
-}
 policy "s3-block-public-access-account-level" {
   source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-S3-Terraform/1.0.1/policy/s3-block-public-access-account-level.sentinel?checksum=sha256:c9d0c9d650c862aa2c6568296123a8f7e0d1fa8b8938545783f960f5c62f9c60"
   enforcement_level = "advisory"
@@ -220,14 +180,6 @@ policy "s3-require-mfa-delete" {
 policy "s3-require-ssl" {
   source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-S3-Terraform/1.0.1/policy/s3-require-ssl.sentinel?checksum=sha256:046daea28e27a5dc550571e82d60ca759440396c4c17a7f2c726b591fa156b77"
   enforcement_level = "advisory"
-}
-
-module "report" {
-  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-S3-Terraform/1.0.1/policy-module/report.sentinel?checksum=sha256:e8422be2bf132524ef264934609cbfbf4846e77936003448a69747330fcfe9ba"
-}
-
-module "tfresources" {
-  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-S3-Terraform/1.0.1/policy-module/tfresources.sentinel?checksum=sha256:54edaac2a209f55d117f92291baae78d400fd47d94336e614f2cadf6b38bea99"
 }
 
 module "tfplan-functions" {
@@ -280,12 +232,4 @@ policy "ec2-vpc-default-security-group-no-traffic" {
 policy "ec2-vpc-flow-logging-enabled" {
   source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-EC2-Terraform/1.0.1/policy/ec2-vpc-flow-logging-enabled.sentinel?checksum=sha256:af1305fb89e4541f5e962ec40c9cf3f1e89a50be8dd9fdd4b27248bf97ffe35d"
   enforcement_level = "advisory"
-}
-
-module "tfresources" {
-  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-EC2-Terraform/1.0.1/policy-module/tfresources.sentinel?checksum=sha256:54edaac2a209f55d117f92291baae78d400fd47d94336e614f2cadf6b38bea99"
-}
-
-module "report" {
-  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-EC2-Terraform/1.0.1/policy-module/report.sentinel?checksum=sha256:e8422be2bf132524ef264934609cbfbf4846e77936003448a69747330fcfe9ba"
 }
