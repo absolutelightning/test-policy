@@ -99,3 +99,54 @@ policy "rds-encryption-at-rest-enabled" {
   source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-RDS-Terraform/1.0.2/policy/rds-encryption-at-rest-enabled.sentinel?checksum=sha256:51a364709f94ed7c57b10379e62ba2f8d7cd817bf5aae05566b170c493e95743"
   enforcement_level = "advisory"
 }
+
+policy "vpc-flow-logging-enabled" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-VPC-Terraform/1.0.1/policy/vpc-flow-logging-enabled.sentinel?checksum=sha256:179e54896ab33a8891a1eaeec6f5e02fb3463ef4b5d96a95bbf10cfa1a77e455"
+  enforcement_level = "advisory"
+}
+
+
+policy "iam-no-admin-privileges-allowed-by-policies" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-IAM-Terraform/1.0.1/policy/iam-no-admin-privileges-allowed-by-policies.sentinel?checksum=sha256:b004ced868b212763b382cb8b55738eda85a553abdad2e6733fe21a83908bc81"
+  enforcement_level = "advisory"
+}
+
+policy "iam-password-uppercase" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-IAM-Terraform/1.0.1/policy/iam-password-uppercase.sentinel?checksum=sha256:2a7409148786bef29fa3c84621d611ce2fed9cfff806360088779db43b93e739"
+  enforcement_level = "advisory"
+}
+
+policy "iam-password-symbols" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-IAM-Terraform/1.0.1/policy/iam-password-symbols.sentinel?checksum=sha256:63ae4403542d9219f7751236ee4e599aca1f0a30e034a7cb9377606aa528b36b"
+  enforcement_level = "advisory"
+}
+
+policy "iam-password-reuse" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-IAM-Terraform/1.0.1/policy/iam-password-reuse.sentinel?checksum=sha256:f038bb885f02b592e3cf6bed19522da85e2d75ae7805c61893b60131f3f16a80"
+  enforcement_level = "advisory"
+}
+
+policy "iam-password-numbers" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-IAM-Terraform/1.0.1/policy/iam-password-numbers.sentinel?checksum=sha256:256b323c1d3d34d799c646215748507766d3e8d0cf5f7257759ab6e2c380bd0b"
+  enforcement_level = "advisory"
+}
+
+policy "iam-password-lowercase" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-IAM-Terraform/1.0.1/policy/iam-password-lowercase.sentinel?checksum=sha256:2d579ad775100f5795bc29efecdb362645df9ce8102cd232bac540b5310514a6"
+  enforcement_level = "advisory"
+}
+
+policy "iam-password-length" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-IAM-Terraform/1.0.1/policy/iam-password-length.sentinel?checksum=sha256:d3040a391bfa6b11fb55abee7a98b15337aa40e1a017cfa4be1f4d9f224f7062"
+  enforcement_level = "advisory"
+}
+
+policy "iam-password-expiry" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-IAM-Terraform/1.0.1/policy/iam-password-expiry.sentinel?checksum=sha256:b0b079d38c2b9d1a9e1aad41679e08553f28c9e673b372362eeebb42764c26f5"
+  enforcement_level = "advisory"
+}
+
+policy "iam-no-policies-attached-to-users" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-IAM-Terraform/1.0.1/policy/iam-no-policies-attached-to-users.sentinel?checksum=sha256:7bc7b11e00c87441c7f367c7aafee39dda5770bb0565a309d847fde844104876"
+  enforcement_level = "advisory"
+}
