@@ -80,3 +80,22 @@ module "report" {
   source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-EFS-Terraform/1.0.1/policy-module/report.sentinel?checksum=sha256:e8422be2bf132524ef264934609cbfbf4846e77936003448a69747330fcfe9ba"
 }
 
+policy "kms-key-rotation-enabled" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-KMS-Terraform/1.0.1/policy/kms-key-rotation-enabled.sentinel?checksum=sha256:4dba0c6e9dfb11add462b52db35db04052b5ca2b6c95c09bcc20a830d426ff79"
+  enforcement_level = "advisory"
+}
+
+policy "rds-public-access-disabled" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-RDS-Terraform/1.0.2/policy/rds-public-access-disabled.sentinel?checksum=sha256:3a376ca9c8b2c98095d6a1dc145071bef53cf6d75dcbe23a1d00edb3f40617c7"
+  enforcement_level = "advisory"
+}
+
+policy "rds-minor-version-upgrade-enabled" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-RDS-Terraform/1.0.2/policy/rds-minor-version-upgrade-enabled.sentinel?checksum=sha256:b3c2957a71992b878940f31a7bc6b904ab873d6732b16384cb16dcabce22645e"
+  enforcement_level = "advisory"
+}
+
+policy "rds-encryption-at-rest-enabled" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/CIS-Policy-Set-for-AWS-RDS-Terraform/1.0.2/policy/rds-encryption-at-rest-enabled.sentinel?checksum=sha256:51a364709f94ed7c57b10379e62ba2f8d7cd817bf5aae05566b170c493e95743"
+  enforcement_level = "advisory"
+}
